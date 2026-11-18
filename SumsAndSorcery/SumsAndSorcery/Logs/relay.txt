@@ -49,3 +49,6 @@
 [2026-11-18T05:52:23.254Z] [DEBUG] log [cursor] getCursorPostInstall: loginExec command="agent"
 [2026-11-18T05:52:23.285Z] [DEBUG] log [provider-version] Fetched versions: [{"id":"codex","version":"0.9.5","isCustom":true},{"id":"gemini","isCustom":true}]
 [2026-11-18T05:52:23.285Z] [DEBUG] log Sent provider versions: 2 providers
+[2026-11-18T20:46:44.708Z] [INFO] log Shutdown request received from client editor-25244-h1xry7
+[2026-11-18T20:46:44.717Z] [INFO] log Unity client requested immediate shutdown - shutting down now, reason: Shutdown requested by client
+[2026-11-18T20:46:44.718Z] [INFO] log Shutdown: Initiating graceful shutdown: Shutdown requested by client

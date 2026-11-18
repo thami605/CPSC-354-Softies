@@ -106,9 +106,13 @@ InitTestScene*.unity*
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
+
+#Noahs gitignore additions
 .vscode/
 **/.vscode/
 
 UnityLockfile
 **/UnityLockfile
 **/UnityLockfile.*
+
+*.jsonl
