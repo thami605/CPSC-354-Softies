@@ -12,10 +12,10 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     private Player player;
-    private List<Enemy> enemies;
-    private expressionManager expressionManager;
+    //private List<Enemy> enemies;
+    //private expressionManager expressionManager;
     private int turnNumber;
-    private TurnState currentTurn;
+    //private TurnState currentTurn;
     
     public void StartCombat() 
     {

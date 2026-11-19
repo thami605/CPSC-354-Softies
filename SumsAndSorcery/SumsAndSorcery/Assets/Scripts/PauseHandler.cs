@@ -16,7 +16,7 @@ using UnityEngine.UIElements;
 public class PauseHandler : MonoBehaviour
 {
     // The singleton class which directs all input actions
-    private InputManager _inputManager;
+    //private InputManager _inputManager;
 
     [SerializeField]
     [Tooltip("The gameobject containing the actual pause menu")]
@@ -36,8 +36,8 @@ public class PauseHandler : MonoBehaviour
     // Returns:     None
     void Awake()
     {
-        _inputManager = InputManager.SingletonInstance;
-        _inputManager.RegisterPulseAction("PauseMenu", ToggleMenu);
+        //_inputManager = InputManager.SingletonInstance;
+        //_inputManager.RegisterPulseAction("PauseMenu", ToggleMenu);
     }
 
     // Name:        Start
@@ -119,6 +119,6 @@ public class PauseHandler : MonoBehaviour
     // Returns:     None
     private void OnDestroy()
     {
-        _inputManager.DeregisterPulseAction("PauseMenu", ToggleMenu);
+        //_inputManager.DeregisterPulseAction("PauseMenu", ToggleMenu);
     }
 }

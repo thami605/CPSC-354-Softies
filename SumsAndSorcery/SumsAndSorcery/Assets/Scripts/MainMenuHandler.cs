@@ -106,6 +106,8 @@ public class MainMenuHandler : MonoBehaviour
     // Returns:     None
     public void StartRun()
     {
-        SceneManager.LoadScene("Run_Map");
+        RunState.StartNewRun();
+
+        SceneManager.LoadScene("Map");
     }
 } 

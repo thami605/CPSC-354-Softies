@@ -5,7 +5,7 @@ public class Player : CharacterBase
     private int currentEnergy;
     private int maxEnergy;
     private Deck deck;
-    private Hand hand;
+    //private Hand hand;
 
 }
 

@@ -10,7 +10,7 @@
 using UnityEngine;
 
 public class Deck : MonoBehaviour
-{
+{/*
     private List<Card> drawPile;
     private List<Card> discardPile;
     private List<Card> exhaustPile;
@@ -50,7 +50,7 @@ public class Deck : MonoBehaviour
     public int getDiscardPileCount() { return discardPile.Count; }
     public int getExhaustPileCount() { return exhaustPile.Count; }
     public int getTotalDeckCount() { return drawPile.Count + discardPile.Count + exhaustPile.Count; }
-}
+*/}
 
 
 /**********************************************************************/
