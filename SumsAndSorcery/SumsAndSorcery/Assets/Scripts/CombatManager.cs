@@ -8,6 +8,7 @@
  * Modifications:  Listed at the bottom of the file. 
  **********************************************************************/
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class CombatManager : MonoBehaviour
     public void EndCombat() 
     {
         // Clean up combat state
+        SceneManager.LoadScene("Map");
+        RunState.CompleteCurrentNode();
     }
 
     public void StartPlayerTurn() 
