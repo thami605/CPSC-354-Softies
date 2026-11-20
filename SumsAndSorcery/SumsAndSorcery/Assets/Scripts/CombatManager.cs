@@ -8,14 +8,15 @@
  * Modifications:  Listed at the bottom of the file. 
  **********************************************************************/
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
     private Player player;
-    private List<Enemy> enemies;
-    private expressionManager expressionManager;
+    //private List<Enemy> enemies;
+    //private expressionManager expressionManager;
     private int turnNumber;
-    private TurnState currentTurn;
+    //private TurnState currentTurn;
     
     public void StartCombat() 
     {
@@ -25,6 +26,8 @@ public class CombatManager : MonoBehaviour
     public void EndCombat() 
     {
         // Clean up combat state
+        SceneManager.LoadScene("Map");
+        RunState.CompleteCurrentNode();
     }
 
     public void StartPlayerTurn() 
