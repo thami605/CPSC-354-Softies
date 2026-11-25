@@ -675,3 +675,22 @@
 [2026-11-25T21:21:02.368Z] [DEBUG] log [cursor] getCursorPostInstall: loginExec command="agent"
 [2026-11-25T21:21:02.541Z] [DEBUG] log [provider-version] Fetched versions: [{"id":"codex","version":"0.9.5","isCustom":true},{"id":"gemini","isCustom":true}]
 [2026-11-25T21:21:02.541Z] [DEBUG] log Sent provider versions: 2 providers
+[2026-11-25T23:21:32.324Z] [INFO] log Domain reload signal received from client editor-23168-8qaoiw
+[2026-11-25T23:21:32.327Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-11-25T23:21:32.327Z] [DEBUG] acp.queue.pause depth=0
+[2026-11-25T23:21:32.343Z] [DEBUG] log Relay->Editor communication is blocked
+[2026-11-25T23:21:32.343Z] [DEBUG] acp.queue.pause depth=0
+[2026-11-25T23:21:32.344Z] [INFO] log Client disconnected - blocking and caching for recovery
+[2026-11-25T23:21:32.344Z] [WARN] connection.lost clientId=null
+[2026-11-25T23:21:32.345Z] [WARN] log Client disconnected - sessions will persist until auto-shutdown, reason: Client disconnected
+[2026-11-25T23:21:32.345Z] [INFO] log Auto-shutdown timer started due to client disconnection
+[2026-11-25T23:21:43.137Z] [DEBUG] log Relay->Editor communication is unblocked
+[2026-11-25T23:21:43.137Z] [INFO] log Unity client connected with ID: editor-23168-qba22u (relay 1.0.12-build.100)
+[2026-11-25T23:21:43.138Z] [INFO] connection.established clientId=editor-23168-qba22u port=9001
+[2026-11-25T23:21:45.142Z] [DEBUG] message.received type=gateway/providers_request
+[2026-11-25T23:21:45.188Z] [DEBUG] log [cursor] getCursorPostInstall: loginExec command="agent"
+[2026-11-25T23:21:45.378Z] [DEBUG] log [provider-version] Fetched versions: [{"id":"codex","version":"0.9.5","isCustom":true},{"id":"gemini","isCustom":true}]
+[2026-11-25T23:21:45.378Z] [DEBUG] log Sent provider versions: 2 providers
+[2026-11-25T23:27:15.485Z] [INFO] log Shutdown request received from client editor-23168-qba22u
+[2026-11-25T23:27:15.486Z] [INFO] log Unity client requested immediate shutdown - shutting down now, reason: Shutdown requested by client
+[2026-11-25T23:27:15.491Z] [INFO] log Shutdown: Initiating graceful shutdown: Shutdown requested by client
