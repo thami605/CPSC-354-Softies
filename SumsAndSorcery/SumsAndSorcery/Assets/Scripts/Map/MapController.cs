@@ -47,7 +47,7 @@ public class MapController : MonoBehaviour
 
                 float x = (col - (count - 1) / 2f) * horizontalSpacing;
 
-                float y = 100f + row * verticalSpacing;
+                float y = -500f + row * verticalSpacing; 
 
                 if (node.encounterType != "Boss")
                 {
@@ -55,10 +55,17 @@ public class MapController : MonoBehaviour
                 }
 
                 nodePositions[index] = new Vector2(x, y);
-
+                    
                 index++;
             }
         }
+
+        //resize Content to fit the entire map.
+        float totalHeight =
+            200f + (RunState.TotalRows - 1) * verticalSpacing;
+
+        mapArea.sizeDelta = new Vector2(600f, totalHeight);
+
 
         GenerateConnections();
         GenerateNodes();
@@ -68,8 +75,16 @@ public class MapController : MonoBehaviour
     {
         foreach (MapNodeData node in RunState.Nodes)
         {
+            if (node.removed)
+                continue;
             foreach (int nextIndex in node.connections)
             {
+                if (RunState.Nodes[nextIndex].removed)
+                    continue;
+
+                if (RunState.Nodes[nextIndex].row != node.row + 1)
+                    continue;
+
                 Vector2 start = nodePositions[node.index];
                 Vector2 end = nodePositions[nextIndex];
 
@@ -108,16 +123,20 @@ public class MapController : MonoBehaviour
     {
         foreach (MapNodeData node in RunState.Nodes)
         {
+            if (node.removed)
+                continue;
             MapNodeUI newNode = Instantiate(
                 nodePrefab,
                 mapArea
             );
 
-            RectTransform nodeTransform =
-                newNode.GetComponent<RectTransform>();
+            RectTransform nodeTransform = newNode.GetComponent<RectTransform>();
 
-            nodeTransform.anchoredPosition =
-                nodePositions[node.index];
+            nodeTransform.anchorMin = new Vector2(0.5f, 0.5f);
+            nodeTransform.anchorMax = new Vector2(0.5f, 0.5f);
+            nodeTransform.pivot = new Vector2(0.5f, 0.5f);
+
+            nodeTransform.anchoredPosition = nodePositions[node.index];
 
             bool available = RunState.CanEnterNode(node.index);
 
