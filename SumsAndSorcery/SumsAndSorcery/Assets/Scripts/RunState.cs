@@ -72,7 +72,7 @@ public static class RunState
         for (int row = 0; row < TotalRows; row++)
         {
             //go through each column in the row
-            for (int coloumn = 0; coloumn < NodesPerRow[row]; coloumn++)
+            for (int column = 0; column < NodesPerRow[row]; column++)
             {
                 //Create a new MapNodeData
                 MapNodeData node = new MapNodeData();
@@ -80,7 +80,7 @@ public static class RunState
                 //set the index, row, and column
                 node.index = index;
                 node.row = row;
-                node.column = coloumn;
+                node.column = column;
 
                 //Makes the last node a boss encounter
                 node.encounterType = row == TotalRows - 1 ? "Boss" : "Combat"; //need to update this later to randomize the rows
